@@ -1,0 +1,21 @@
+#table
+{
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    background-color: rgb(13, 14, 13);
+}
+
+body
+{
+    background-color: rgb(20, 20, 19);
+}
+
+th{
+    background-color: brown;
+}
+
+tr{
+    background-color: rgb(56, 244, 50);
+}
+

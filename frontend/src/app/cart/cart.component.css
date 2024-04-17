@@ -1,0 +1,40 @@
+#confirm
+{
+  width: 100px;
+  height: 50px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight:bold;
+  border:2px solid #0c0c0c;
+  background:transparent;
+  color:#101010;
+  position: absolute;
+  top: 85%;
+  left: 45%;
+  background-color: #0ed332;
+}
+
+.table
+{
+  position: relative;
+  left: 25%;
+  top:10%;
+}
+
+#bu
+{
+  width: 60px;
+  height: 10px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 5px;
+  font-weight:bold;
+  border:2px solid #101010;
+  background:transparent;
+  color:#100d1d;
+  position: relative;
+  background-color: #dbeedf;
+}

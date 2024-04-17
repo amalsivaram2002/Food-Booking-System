@@ -1,0 +1,168 @@
+.card
+{
+  
+  background-color: rgb(239, 231, 231);
+  position: relative;
+  border-radius: 15px;
+  
+}
+
+.btn{
+  width: 100px;
+  height: 40px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight:bold;
+  border:2px solid #da1414;
+  background:transparent;
+  color:#100d1d;
+  position: relative;
+  top: 25%;
+  left: 30%;
+}
+
+
+.d1
+{
+  width: 20%;
+  height: 50%;
+  background-color: rgb(239, 231, 231);
+  position: absolute;
+  left:3%;
+  top: 20%;
+  border-radius: 15px;
+  
+}
+
+.d1 button{
+  width: 100px;
+  height: 50px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight:bold;
+  border:2px solid #da1414;
+  background:transparent;
+  color:#100d1d;
+  position: relative;
+  top: 25%;
+  left: 30%;
+}
+
+.d2
+{
+  width: 20%;
+  height: 50%;
+  background-color: rgb(239, 231, 231);
+  position: absolute;
+  left:30%;
+  top:20%;
+  border-radius: 15px;
+  
+}
+
+.d2 button{
+  width: 100px;
+  height: 50px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight:bold;
+  border:2px solid #da1414;
+  background:transparent;
+  color:#100d1d;
+  position: relative;
+  top: 75%;
+  left: 30%;
+}
+
+.d3
+{
+  width: 20%;
+  height: 50%;
+  background-color: rgb(239, 231, 231);
+  position: absolute;
+  left:55% ;
+  top:20%;
+  border-radius: 15px;
+  
+}
+
+.d3 button{
+  width: 100px;
+  height: 50px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight:bold;
+  border:2px solid #da1414;
+  background:transparent;
+  color:#100d1d;
+  position: relative;
+  top: 75%;
+  left: 30%;
+}
+
+.d4
+{
+  width: 20%;
+  height: 50%;
+  background-color: rgb(239, 231, 231);
+  position: absolute;
+  left:78%;
+  top: 20%;
+  border-radius: 15px;
+  
+}
+
+.d4 button{
+  width: 100px;
+  height: 50px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight:bold;
+  border:2px solid #da1414;
+  background:transparent;
+  color:#100d1d;
+  position: relative;
+  top: 75%;
+  left: 30%;
+}
+
+.cartimg{
+  width: 50%;
+}
+
+#confirm
+{
+  width: 100px;
+  height: 50px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight:bold;
+  border:2px solid #0c0c0c;
+  background:transparent;
+  color:#101010;
+  position: absolute;
+  top: 85%;
+  left: 45%;
+  background-color: #0ed332;
+}
+
+.cart
+{
+  position: absolute;
+  top: 3%;
+  left: 70%;
+}
+
+

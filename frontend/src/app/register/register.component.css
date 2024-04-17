@@ -1,0 +1,62 @@
+.total
+{
+  width: 40%;
+  height: 600px;
+  background-color: rgb(239, 231, 231);
+  position: relative;
+  left: 500px;
+  top: 75px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(214, 13, 13, 0.2),0 6px 20px 0 rgba(215, 29, 29, 0.4);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgb(30, 214, 14),rgb(10, 224, 24));
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .title{
+    position: absolute;
+    top:5%;
+    left:40%;
+    font-size: 30px;
+  }
+
+  .reg1{
+    position: absolute;
+    top:20%;
+    left:30%;
+    font-size: 25px;
+  }
+  
+  .reg2{
+    position: absolute;
+    top:35%;
+    left:30%;
+    font-size: 25px;
+  }
+
+  .reg3{
+    position: absolute;
+    top:50%;
+    left:30%;
+    font-size: 25px;
+  }
+  
+  .reg4{
+    position: absolute;
+    top:65%;
+    left:30%;
+    font-size: 25px;
+  }
+  
+  .button{
+    position: absolute;
+    top:85%;
+    left: 30%;
+    background-color: rgb(226, 43, 165);
+    border-radius: 25px;
+  }

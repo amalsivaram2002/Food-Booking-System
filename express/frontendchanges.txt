@@ -1,0 +1,176 @@
+login component.ts
+------------------
+//Here the component name is signin change to your respective to your login component name 
+
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service';//specify the userservice file path 
+import { ActivatedRoute, Router } from '@angular/router';
+
+@Component({
+  selector: 'app-signin',
+  templateUrl: './signin.component.html',
+  styleUrls: ['./signin.component.css']
+})
+export class SigninComponent {
+
+  loginForm!:FormGroup;
+  isSubmitted=false;
+  returnUrl='';
+  invalid=false;
+  constructor(private formBuilder:FormBuilder,private userservice:UserService,private route:Router){
+    this.loginForm=this.formBuilder.group({
+      email:['',[Validators.required,Validators.email]],
+      password:['',Validators.required]
+    });
+
+  }
+  get fc(){
+    return this.loginForm.controls;
+  }
+  submit(){
+    this.isSubmitted=true;
+    if(this.loginForm.invalid) return;
+    this.userservice.login({email:this.fc['email'].value,password:this.fc['password'].value}).subscribe((res:any)=>{
+      if(res['msg']!=-1){
+      this.route.navigateByUrl("/");//routing to home page
+    }
+    else{
+      this.invalid=true;
+
+    }
+    })
+  }
+
+
+}
+====================================================================================================================
+login component.html
+--------------------
+<h4 *ngIf="invalid">username or password is invalid</h4>
+<form  [formGroup]="loginForm" (ngSubmit)="submit()">
+    <div >
+      <label>Email:</label>
+      <div>
+        <input  type="email" placeholder="abc@xyz.com" formControlName="email" />
+      </div>
+      <div  *ngIf="fc['email'].errors && isSubmitted">
+        <div *ngIf="fc['email'].errors['required']">Should not be empty</div>
+        <div *ngIf="fc['email'].errors['email']">Email is not correct</div>
+      </div>
+    </div>
+    <div >
+      <label>Password:</label>
+      <div>
+        <input  type="password" placeholder="Enter password" formControlName="password" />
+      </div>
+      <div  *ngIf="fc['password'].errors && isSubmitted">
+        <div *ngIf="fc['password'].errors['required']">Should not be empty</div>
+      </div>
+    </div>
+      <button type="submit">Login</button>
+    <div >
+          <!-- <p>If not registered? <a routerLink="/register">Signup!</a></p> -->
+    </div>
+</form>
+=================================================================================================================
+user service.ts
+---------------
+//user service created using command - ng g s user
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Userinterface } from '../userinterface';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  
+  user:any;
+  constructor(private http:HttpClient) { }
+  login(userLogin:Userinterface):Observable<any>{
+    this.user=userLogin;
+    console.log(userLogin);
+    return this.http.post<any>("http://localhost:3000/api/users/login", userLogin)
+    
+}
+
+get currentUser(){
+  return this.user;
+}  
+
+}
+==============================================
+userInterface.ts
+----------------
+//user interface created using command - ng g i user
+export interface IUserLogin{
+    email:string;
+    password:string;
+  }
+==============================================
+interceptor.ts
+--------------
+//This file has to be created manually
+//This file defines connection establishment between frontend and backend
+//No changes need to be done 
+import { Injectable } from '@angular/core';
+import {
+  HttpRequest,
+  HttpHandler,
+  HttpEvent,
+  HttpInterceptor
+} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { UserService } from '../services/user.service';
+
+@Injectable()
+export class AuthInterceptor implements HttpInterceptor {
+
+  constructor(private userService: UserService) {}
+
+  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+    const user = this.userService.currentUser;
+    if(user.token)
+    {
+      request = request.clone({
+        setHeaders:{
+          access_token: user.token
+        }
+      })
+    }
+    return next.handle(request);
+  }
+}
+=======================================================================================
+app module.ts
+-------------
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './auth/auth.interceptor';
+//the importing modules are need to be installed using command -npm install modulename 
+
+@NgModule({
+  declarations: [		//here each and every components are declared to use in project
+    AppComponent,
+    SignupComponent,
+    SigninComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,		//here each and every modules are imported to use in project
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+  providers: [{provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor, multi: true}], //the request handling providers are intialized
+  bootstrap: [AppComponent]
+})
+
+===============================================================================================
+
+
+
+
+Note: For creating request similar to login request only the service file and respective component,ts and html file will have changes
+      other files or common for any requests

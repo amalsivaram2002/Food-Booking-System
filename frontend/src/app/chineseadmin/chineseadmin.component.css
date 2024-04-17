@@ -1,0 +1,178 @@
+.add
+{
+  width: 40%;
+  height: 600px;
+  background-color: rgb(59, 203, 71);
+  position: relative;
+  left: 100px;
+  top: 75px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(214, 13, 13, 0.2),0 6px 20px 0 rgba(215, 29, 29, 0.4);
+}
+
+#bu1
+{
+  width: 80px;
+  height: 40px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 5px;
+  font-weight:bold;
+  border:2px solid #da1414;
+  background:transparent;
+  color:#100d1d;
+  position: relative;
+  background-color: #0dd231;
+}
+
+#bu2
+{
+  width: 80px;
+  height: 40px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 5px;
+  font-weight:bold;
+  border:2px solid #da1414;
+  background:transparent;
+  color:#100d1d;
+  position: relative;
+  background-color: #0dd231;
+}
+
+#bu3
+{
+  width: 80px;
+  height: 40px;
+  padding:15px 0;
+  text-align:center;
+  margin: 20px 10px;
+  border-radius: 5px;
+  font-weight:bold;
+  border:2px solid #da1414;
+  background:transparent;
+  color:#100d1d;
+  position: relative;
+  background-color: #0dd231;
+}
+
+.update
+{
+  width: 20%;
+  height: 300px;
+  background-color: rgb(88, 231, 91);
+  position: absolute;
+  left: 500px;
+  top: 75px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(214, 13, 13, 0.2),0 6px 20px 0 rgba(215, 29, 29, 0.4);
+}
+
+.delete
+{
+  width: 20%;
+  height: 300px;
+  background-color: rgb(71, 216, 88);
+  position: absolute;
+  left: 500px;
+  top: 75px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(214, 13, 13, 0.2),0 6px 20px 0 rgba(215, 29, 29, 0.4);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgb(10, 10, 10),rgb(25, 24, 24));
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .title{
+    position: absolute;
+    top:5%;
+    left:40%;
+    font-size: 30px;
+  }
+
+  .reg1{
+    position: absolute;
+    top:20%;
+    left:30%;
+    font-size: 25px;
+  }
+  
+  .reg2{
+    position: absolute;
+    top:35%;
+    left:30%;
+    font-size: 25px;
+  }
+
+  .reg3{
+    position: absolute;
+    top:50%;
+    left:30%;
+    font-size: 25px;
+  }
+  
+  .reg4{
+    position: absolute;
+    top:65%;
+    left:30%;
+    font-size: 25px;
+  }
+  
+  .button{
+    position: absolute;
+    top:85%;
+    left: 30%;
+    background-color: rgb(226, 43, 165);
+    border-radius: 25px;
+  }
+
+  .update button
+  {
+    position: absolute;
+    top:75%;
+    left: 5%;
+    background-color: rgb(226, 43, 165);
+    border-radius: 25px;
+  }
+
+  .update p{
+    position: relative;
+    top : 10%;
+    left : 5%;
+  }
+
+  .update input
+  {
+    position: relative;
+    top : 11%;
+    left: 5%;
+  }
+
+  .delete button
+  {
+    position: absolute;
+    top:75%;
+    left: 5%;
+    background-color: rgb(226, 43, 165);
+    border-radius: 25px;
+  }
+
+  .delete p{
+    position: relative;
+    top : 25%;
+    left : 5%;
+  }
+
+  .delete input
+  {
+    position: relative;
+    top : 30%;
+    left: 5%;
+  }

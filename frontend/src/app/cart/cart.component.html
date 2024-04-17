@@ -1,0 +1,23 @@
+<button id="confirm" (click)="placeOrder()">Confirm Order</button>
+<div class="table">
+<table  cellspacing="10" cellpadding="20">
+    <thead>
+        <th>S.no</th>
+        <th>Name</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of message; index as userno">
+            <td>{{userno+1}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.price}}</td>
+            <td><button (click)="pass(i,i.price)" id="bu">Remove</button></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <td colspan="2">Total</td>
+        <td>{{total}}</td>
+    </tfoot>
+</table>
+</div>
+

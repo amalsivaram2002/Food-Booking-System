@@ -1,0 +1,20 @@
+<body>
+<div class="container">
+    <p style="font-family:Cooper;" id="title">Admin Login</p>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <p for="email" style="font-family:'Times New Roman', Times, serif;">Email</p>
+        <input type="email" id="email" class="form-control" formControlName="mail" style="width: 250px;height:30px">
+        
+      </div>
+      <div class="for-group">
+        <p style="font-family:'Times New Roman', Times, serif;" for="password">Password</p>
+        <input type="password" id="password" class="form-control" formControlName="pass" style="width: 250px;height:30px">
+        
+      </div>
+      
+      <button type="submit" class="btn btn-primary" >Login</button>
+    </form>
+  </div>
+</body>
+  

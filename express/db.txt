@@ -1,0 +1,84 @@
+main.ts
+--------
+import express from 'express';
+import dotenv from 'dotenv';
+import { dbConnect } from '../berryBackend/dbconfig';
+import cors from 'cors';
+import { UserModel } from './models/userModel'
+
+
+dotenv.config();
+dbConnect();
+
+ new UserModel({
+  name: 'Prama',
+  email: 'pramakarthick@gmail.com',
+}).save();
+
+
+
+const app=express();
+
+app.use(cors({
+    credentials:true,
+    origin:["http://localhost:4200"]
+  }));
+
+  const port=process.env.PORT || 3000;
+app.listen(port,()=>{
+  console.log("server connected to ",port);
+});
+
+======================================================================
+dbconfig.ts
+-----------
+import { connect,ConnectOptions, set } from "mongoose";
+const LOCAL_DB_CON="mongodb://127.0.0.1:27017/db";
+export const dbConnect =()=>{
+  connect(LOCAL_DB_CON!,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true
+  } as ConnectOptions).then(
+    ()=>console.log("connected successful"),
+    (error)=>console.log(error)
+  )
+}
+
+====================================================================
+package.json(No need to Create)
+------------
+"scripts": {
+    "start": "nodemon main.ts",
+    "build": "npm install && tsc"
+  },
+====================================================================
+usermodel.ts
+------------
+import { model, Schema } from "mongoose";
+
+export interface User{
+  id:string;
+  name:string;
+  email:string;
+}
+
+export const UserSchema=new Schema<User>({
+  name:{type:String,required:true},
+  email:{type:String,required:true,unique:true}
+},
+{
+  toJSON:{virtuals:true},toObject:{virtuals:true},timestamps:true
+})
+
+
+export const UserModel=model<User>('UserCollections',UserSchema);
+==========================================================================
+==========================================================================
+powershell
+----------
+Set -ExecutionPolicy -ExectionPolicyRemotSigned -Scope CurrentUser
+============???
+interface;check
+
+
+

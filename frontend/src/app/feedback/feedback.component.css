@@ -1,0 +1,75 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgb(244, 236, 239),rgb(238, 230, 7));
+    height: 100vh;
+    overflow: hidden;
+  }
+   
+  .login{
+    position: absolute;
+    top:30%;
+    left:40%;
+    font-size: 30px;
+  }
+  
+  .login1{
+    position: absolute;
+    top:45%;
+    left:40%;
+    font-size: 30px;
+  }
+  
+  .button{
+    position: absolute;
+    top:62%;
+    left: 40%;
+    background-color: rgb(226, 43, 165);
+    border-radius: 25px;
+  }
+  
+  .register{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    font-size: 30px;
+    color: #1c1c1b;
+  }
+  
+  .service{
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    font-size: 30px;
+  }
+  .service1{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 30px;
+  }
+  .service2
+  {
+    position:absolute;
+    top:35%;
+    left:30%;
+  }
+  .service1 p{
+    color: #cfc842;
+  }
+  .service p{
+    color:#cfcd42
+  }
+  .submit{
+    position: absolute;
+    top:70%;
+    left: 40%;
+    border-radius:25px ;
+  }

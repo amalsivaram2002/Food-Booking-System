@@ -1,0 +1,35 @@
+
+<h1>Your Orders</h1>
+
+    <div class="container">
+        <div class="">
+            <div class="card" *ngFor="let item of food">
+                <br>
+                <ng-container >
+                <div class="card-body" >
+                  <div class="table-title">
+                      <h4>Summary</h4>
+                  </div>
+                  <table class="table table-striped table-hover table-bordered" cellspacing="10" cellpadding="20">
+                    <thead>
+                      <tr>
+                        <th scope="col">email</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let i of item.cartlist">
+                      <tr>
+                        <td scope="row" rowspan="4">{{item.email}}</td>
+                        <td>{{i.name}}</td>
+                        <td>{{i.price}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </ng-container>
+              </div>
+        </div>
+    </div>
+
+

@@ -1,0 +1,33 @@
+.head
+{
+    height: 10%;
+    background-color: rgba(8, 7, 7, 0.813);
+}
+
+.head p
+{
+    font-size: 35px;
+    position: relative;
+    top: 30%;
+    color: rgb(248, 242, 242);
+}
+#title
+{
+    top: -10%;
+    position: relative;
+    left: 40%;
+    font-size: 25px;
+    color: rgb(239, 232, 232);
+}
+.para
+{
+    background-image: linear-gradient(rgb(240, 74, 41),hwb(240 6% 94%));
+}
+#lines
+{
+    top: 100%;
+    position: relative;
+    left:8%;
+    font-size: 25px;
+    color: rgb(239, 232, 232);
+}

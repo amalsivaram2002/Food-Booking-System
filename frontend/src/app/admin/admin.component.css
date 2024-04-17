@@ -1,0 +1,179 @@
+.colour
+{
+    background-image: linear-gradient(rgb(240, 74, 41),rgb(240, 74, 41));
+}
+
+.resta1name{
+    font-size: 30px;
+}
+
+#bu
+{
+    width: 140px;
+    height: 50px;
+    padding:15px 0;
+    text-align:center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight:bold;
+    border:2px solid #f5f2f2;
+    background:transparent;
+    color:#f7f8f7;
+    position: absolute;
+    left: 45%;
+    top: 85%;
+    background-color: #58c371;
+}
+
+.resta1name button{
+    width: 140px;
+    height: 50px;
+    padding:15px 0;
+    text-align:center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight:bold;
+    border:2px solid #ebe5e5;
+    background:transparent;
+    color:#fcfbfe;
+    position: absolute;
+    left: 6%;
+    top: 75%
+}
+
+#bu1
+{
+    background-color: #58c371;
+}
+
+#bu2
+{
+    background-color: #58c371;
+}
+
+#bu3
+{
+    background-color: #58c371;
+}
+
+#bu4
+{
+    background-color: #58c371;
+}
+
+.resta1name p{
+    position: absolute;
+    top:180px;
+    left: 4%;
+    color:#eeedf0;
+}
+
+.resta1name img
+{
+    position: absolute;
+    left: 3%;
+    top: 35%;
+}
+
+
+.resta2name{
+    font-size: 30px;
+}
+
+.resta2name p{
+    position: absolute;
+    top:180px;
+    left: 33%;
+    color:#eeedf0;
+}
+
+.resta2name button{
+    width: 140px;
+    height: 50px;
+    padding:15px 0;
+    text-align:center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight:bold;
+    border:2px solid #f9f2f2;
+    background:transparent;
+    color:#eeedf0;
+    position: absolute;
+    left: 32%;
+    top: 75%;
+}
+
+.resta2name img
+{
+    position: absolute;
+    left: 29%;
+    top: 34%;
+}
+
+.resta3name{
+    font-size: 30px;
+}
+
+.resta3name button{
+    width: 140px;
+    height: 50px;
+    padding:15px 0;
+    text-align:center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight:bold;
+    border:2px solid #f5f2f2;
+    background:transparent;
+    color:#f7f5f7;
+    position: absolute;
+    left: 58%;
+    top: 75%;
+}
+
+.resta3name p{
+    position: absolute;
+    top:180px ;
+    left: 56%;
+    color:#eeedf0;
+}
+
+.resta3name img
+{
+    position: absolute;
+    left: 55%;
+    top: 34%;
+}
+
+
+.resta4name button{
+    width: 140px;
+    height: 50px;
+    padding:15px 0;
+    text-align:center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight:bold;
+    border:2px solid #f5f2f2;
+    background:transparent;
+    color:#f4f4f7;
+    position: absolute;
+    left: 83%;
+    top: 75%;
+}
+
+.resta4name p{
+    position: absolute;
+    top:24% ;
+    left: 81%;
+    font-size: xx-large;
+    color:#eeedf0;
+}
+
+.resta4name img
+{
+    position: absolute;
+    left: 80%;
+    top: 34%;
+}
+
+

@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <div>
+          <button (click)="but1()" id="bu1">Add</button>
+          <button (click)="but2()" id="bu2">Update</button>
+          <button (click)="but3()" id="bu3">Delete</button>
+        </div>
+        
+        <ng-container *ngIf="flag==1" >
+          <div class="add">
+        <form action="http://localhost:5001/chineseadmin" method="post">
+          <div class="title">
+          <p style="font-family:Cooper">Add Food</p></div>
+        <div class="reg1">
+            <p style="font-family:Berlin">S . no:</p>
+            <input type="number" name="fname" style="width: 250px;height:30px">
+          </div>
+          <div class="reg2">
+            <p style="font-family:Berlin">Name</p>
+            <input type="text" name="lname"style="width: 250px;height:30px">
+          </div>
+        <div class="reg3">
+            <p style="font-family:Berlin">Price</p>
+            <input type="number" name="email" min=0 max=100 style="width: 250px;height:30px">
+          </div>
+          <div class="reg4">
+            <p style="font-family:Berlin">Path</p>
+            <input type="text" name="path" style="width: 250px;height:30px">
+          </div>
+          <div>
+            <button class="button"  style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;width: 250px;height:40px">Submit</button>
+          </div>
+        </form>
+      </div>
+      </ng-container>
+
+
+      <ng-container *ngIf="flag2==1">
+        <form action="http://localhost:5010/chineseupdate" method="post">
+          <div class="update">
+            <p style="font-family:Cooper">Update Food</p>
+            
+            <input type="text" name="fname" placeholder="select food" list="name">
+            <datalist id="name">
+              <ng-container *ngFor="let item of food ">
+              <option value={{item.name}}>
+              </ng-container>
+            </datalist>
+            <!-- <input type="text" name="fname" style="width: 250px;height:30px"> -->
+          
+            <button class="button1" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;width: 250px;height:40px">Submit</button>
+            <p style="font-family:Berlin">price</p>
+            <input type="text" name="price" style="width: 250px;height:30px">
+          </div>
+        </form>
+      </ng-container>
+
+
+      <ng-container *ngIf="flag3==1">
+        <form action="http://localhost:5005/chinadelete" method="post">
+          <div class="delete" >
+            <p style="font-family:Cooper">Remove Food</p>
+            <input type="text" name="fname" placeholder="select food" list="name">
+            <datalist id="name">
+              <ng-container *ngFor="let item of food ">
+
+              <option value={{item.name}}>
+              </ng-container>
+            </datalist>
+            <button class="button" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;width: 250px;height:40px">Submit</button>
+          </div>
+        </form>
+      </ng-container>
+
+
+      
+
+
+      
+
+    </body>
+</html>

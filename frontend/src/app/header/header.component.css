@@ -1,0 +1,73 @@
+.head
+{
+    height: 10%;
+    background-color: rgb(23, 24, 23);
+}
+
+.head p
+{
+    font-size: 40px;
+    position: relative;
+    top: 30%;
+    color: rgb(246, 239, 239);
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 100;
+    overflow: hidden;
+    background-color: rgb(23, 24, 23);
+    position:absolute;
+    left: 50%;
+}
+li{
+    float: left;
+}
+li a{
+    display: block;
+    color: rgb(246, 239, 239);
+    text-align: center;
+    padding: 20px 36px;
+    text-decoration: none;
+}
+li a:hover
+{
+    background-color: #1eeb58;
+}
+
+
+#home
+{
+    top: -10%;
+    position: relative;
+    left: 25%;
+    font-size: 25px;
+    color: rgb(251, 249, 249);
+}
+
+#feed
+{
+    top: -10%;
+    position: relative;
+    left: 35%;
+    font-size: 25px;
+    color: rgb(247, 244, 244);
+}
+
+#diet
+{
+    top: -10%;
+    position: relative;
+    left: 45%;
+    font-size: 25px;
+    color: rgb(245, 239, 239);
+}
+
+#logout
+{
+    top: 10%;
+    position: absolute;
+    left: 80%;
+    font-size: 25px;
+    color: rgb(248, 242, 242);
+}

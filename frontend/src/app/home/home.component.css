@@ -1,0 +1,89 @@
+body{
+    background-image:url('/assets/img/8.jpg');
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+  }
+
+#b1{
+    position: absolute;
+    top:2%;
+    left: 88%;
+    font-size: 20px;
+    width:80px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+#b2{
+    position: absolute;
+    top:2%;
+    left: 94%;
+    font-size: 20px;
+    width: 80px;
+    height: 50px;
+    border-radius: 25px;
+}
+#login
+{
+    position: absolute;
+    top:3%;
+    left: 112%;
+    font-size: 20px;
+}
+
+.back p
+{
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    font-size: 75px;
+    color: rgb(246, 245, 248);
+}
+
+.order p
+{
+    position: absolute;
+    top:40%;
+    left: 3%;
+    font-size: 30px;
+}
+
+#about
+{
+    position: absolute;
+    top: 3%;
+    left: 90%;
+    font-size: 20px;
+}
+
+.order button{
+    width: 115px;
+    height: 40px;
+    padding:15px 0;
+    text-align:center;
+    margin: 20px 10px;
+    border-radius: 20px;
+    font-weight:bold;
+    border:2px solid #37db45;
+    background:transparent;
+    color:#0e0c0c;
+    position: absolute;
+    left: 9%;
+    top: 48%
+}
+
+#button1{
+    background-color: #e5e4eb; color: rgb(234, 226, 226);
+    color: rgb(15, 14, 15);
+}
+
+.back h1
+{
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    font-size: xx-large;
+}
+

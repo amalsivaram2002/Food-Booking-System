@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <br>
+        <br>
+        <div class="cart">
+           <img src="../../assets/img/cart.jpg" routerLink="/cart" class="cartimg">
+        </div>
+        <br>
+        <ng-container *ngFor="let item of food ">
+            <div style="display: inline-block; padding:5px ;">
+                <div class="card" style="width: 18rem;" >
+                    <img src="{{item.path}}" alt="Card image cap" style="height: 50%; width: 100%;">
+                    <div class="card-body">
+                        <h1 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h1> 
+                        <p><strong>Price:</strong> {{item.price}} </p>
+                        <input type="hidden" value="{{item._id}}"/>
+                        <button class="btn" (click)="add(item.sno)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+         </ng-container>
+    </body>
+</html>
+
+
+
+
+<!-- <ng-container *ngFor="let item of food" >
+    <tr>
+        <td>{{item.sno}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+       
+    </tr>
+</ng-container> -->

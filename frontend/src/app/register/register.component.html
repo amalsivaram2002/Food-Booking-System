@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+      <div class="total">
+        <form action="http://localhost:3000/register" method="post">
+          <div class="title">
+          <p style="font-family:Cooper">GoodFood</p></div>
+        <div class="reg1">
+            <p style="font-family:Berlin">Name</p>
+            <input type="text" name="fname" style="width: 250px;height:30px">
+          </div>
+          <div class="reg2">
+            <p style="font-family:Berlin">Phone</p>
+            <input type="text" name="lname"style="width: 250px;height:30px">
+          </div>
+        <div class="reg3">
+            <p style="font-family:Berlin">EmailId</p>
+            <input type="text" name="email" style="width: 250px;height:30px">
+          </div>
+          <div class="reg4">
+            <p style="font-family:Berlin">Password</p>
+            <input type="password" name="pass" style="width: 250px;height:30px">
+          </div>
+          <div>
+            <button class="button" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;width: 250px;height:40px" (click)="onsubmit()" >Submit</button>
+          </div>
+        </form>
+      </div>
+    </body>
+</html>

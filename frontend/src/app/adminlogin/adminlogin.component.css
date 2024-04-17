@@ -1,0 +1,53 @@
+.container
+{
+  width: 35%;
+  height: 385px;
+  background-color: rgb(18, 17, 17);
+  position: relative;
+  left: 150px;
+  top: 120px;
+  border-radius: 25px;
+  box-shadow: 0 8px 16px 0 rgba(254, 252, 252, 0.2),0 6px 20px 0 rgba(249, 246, 246, 0.4);
+}
+
+  body{
+    background-image:url('/assets/img/5.jpg');
+    -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+  }
+
+  #title{
+    position: absolute;
+    top: 30px;
+    left:35%;
+    font-size: 30px;
+    color: rgb(246, 245, 248);
+  }
+   
+  .form-group{
+    position: absolute;
+    top:25%;
+    left:10%;
+    font-size: 25px;
+    color: rgb(246, 245, 248);
+  }
+  
+  .for-group{
+    position: absolute;
+    top:45%;
+    left:10%;
+    font-size: 25px;
+    color: rgb(244, 244, 246);
+  }
+  
+  .btn {
+    position: absolute;
+    top:75%;
+    left: 43%;
+    background-color: rgb(251, 251, 252);
+    border-radius: 10px;
+    width: 15%;
+    height: 35px;
+  }

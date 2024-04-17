@@ -1,0 +1,25 @@
+<body>
+  <div>
+    <button style="font-family:Algerian" routerLink="/" id="h">Home</button>
+  </div>
+<div class="container">
+  <p id="title" style="font-family:Cooper;">Login</p>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <p style="font-family:'Times New Roman', Times, serif;"for="email">Email </p>
+      <input type="email" id="email" class="form-control" formControlName="mail" name="fname" style="width: 250px;height:30px">
+      
+    </div>
+    <div class="for-group">
+      <p style="font-family:'Times New Roman', Times, serif;"for="password">Password</p>
+      <input type="password" id="password" class="form-control" formControlName="pass"name="fname" style="width: 250px;height:30px">
+      
+    </div>
+    
+    <button type="submit" class="btn btn-primary" style="font-family:'Times New Roman', Times, serif;">Login</button>
+  </form>
+  <div class="register">
+  <p style="font-family:Poppins">New user?<a routerLink="/register"> Register</a></p>
+  </div>
+</div>
+</body>

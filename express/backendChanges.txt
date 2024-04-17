@@ -1,0 +1,49 @@
+backend main(starting) file must be a ts file to execute these
+
+userrouter.ts
+-------------
+import { Router } from "express";
+
+
+const router= Router();
+import asyncHandler from "express-async-handler";
+import { UserModel,User } from "../models/userModel";
+
+router.post("/login",asyncHandler(
+    async(req:any,res:any)=>{
+    const {email}=req.body;
+    const user=await UserModel.findOne({email});
+    if(user){
+      console.log("done");
+      res.send(user);
+    }
+    else{
+      console.log("invalid User");
+           res.json({msg:-1});
+    }
+}))
+
+//similarly sigin up can be done for signin usermodel.create() function will be used
+
+
+export default router;
+================================================================>
+main.ts
+-------
+import { Router } from "express";
+import  userrouter  from "./routers/userrouter"
+import bodyParser from 'body-parser';
+const router= Router();
+
+app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
+app.use(cors({
+    credentials:true,
+    origin:["http://localhost:4200"]
+  }));
+
+app.use("/api/users",userrouter);
+
